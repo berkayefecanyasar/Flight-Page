@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -6,40 +7,188 @@
     <title>Bootstrap demo</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
     <link rel="script" href="/main.js">
+    <link rel="stylesheet"  type="text/css" href="style.css">
 </head>
-  <body>
-    <header class="container border" style="height: 30vh;">
-    </header>
-    <div class="container">
-        <form>
-            <div class="border border-primary btn-group" role="group">
-               <div class="row">
-                    <div class="col mx-auto px-5" style="width: 5%;">
-                        <div class="row row-cols-auto border border-secondary">
-                            <label for="gdonus" class="btn btn-outline-primary " for="gdonus">Gidiş-Dönüş</label>
-                            <input class="col-12 btn-check position-relative"  type="radio" id="gdonus" name="btnradio" autocomplete="off" checked>
-                        </div>
-                    </div>
-                    <div class="col mx-auto px-5"  style="width: 5%;">
-                        <div class="row row-cols-auto border border-secondary">
-                            <label for="tyon" class="btn btn-outline-primary  " for="tyon">Tek Yön</label> 
-                            <input class=" col-12 btn-check position-relative" type="radio" id="tyon" name="btnradio" autocomplete="off">
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </form>
-    </div>
-    <main class="container" style="height: 15vh;">
-        <div class="row border">
-            <div class="col-sm-8 border-bottom">
-                
-            </div>
-            <div class="col-sm-4 border-bottom">
 
+<body>
+<!--Site Header Part Desing-->
+    <header class="container">
+        <div class="d-flex align-items-center justify-content-between">
+            <img src="img/logo.png" alt="Plane-Logo" width="200">
+            <div class="d-none d-xl-flex align-items-center">
+                <p class="fw-bold text-primary m-0">Login</p>
+                <input type="text" placeholder="*****@gmail.com" class="form-control mx-2">
+                <div class="btn btn-outline-primary fw-bold">Login</div>
             </div>
         </div>
-    </main>
+    </header>
+<!-- Site Main Section-->
+    <main class="position-relative">
+        <img src="img/background.png" alt="" class="img-fluid d-none d-xl-block">
+        <div class="d-none d-xl-block position-absolute start-50 top-50 translate-middle">
+        <!-- Adding a slogan-->
+            <p class="fw-lighter text-secondary fs-1">Flight To Your Dream</p>
+            <div class="rounded p-3 bg-cp" style="margin-bottom: 10%; width:85vw">
+                <!-- One Way or Multi Way selection -->
+                <section class="d-flex align-items-center">
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="flexRadioDefault" id="tekyön">
+                        <label class="form-check-label fw-bold fs-7  me-2" for="flexRadioDefault1">
+                          Tek Yön
+                        </label>
+                      </div>
+                      <div class="form-check">
+                        <input class="form-check-input" type="radio" name="flexRadioDefault" id="gidisdönüs" checked>
+                        <label class="form-check-label fw-bold fs-7 " for="flexRadioDefault2">
+                          Gidiş Dönüş
+                        </label>
+                      </div>
+                </section>
+                <!-- Autoselection for selecting cities-->
+                <section class="d-flex align-items-center py-2">
+                    <!-- From Part Selection-->
+                    <div>
+                        <label for="fromselection" class="form-label fw-bold fs-8 m-0">Nereye</label><br>
+                        <input class="form-control inp-width inp-height" list="fromlist" id="fromselection" placeholder="Havaalanı veya Ülke">
+                        <datalist id="fromlist">
+                        <option value="San Francisco">
+                        <option value="New York">
+                        <option value="Seattle">
+                        <option value="Los Angeles">
+                        <option value="Chicago">
+                        </datalist>
+                    </div>
+                    <!-- To Part Selection-->
+                    <div>
+                        <label for="toselection" class="form-label fw-bold fs-8 m-0">Nereden</label><br>
+                        <input class="form-control inp-width inp-height" list="tolist" id="toselection" placeholder="Havaalanı veya Ülke">
+                        <datalist id="tolist">
+                        <option value="San Francisco">
+                        <option value="New York">
+                        <option value="Seattle">
+                        <option value="Los Angeles">
+                        <option value="Chicago">
+                        </datalist>
+                    </div>
+                    <!-- Date Selection Part-->
+                    <div>
+                        <!--Departure Date Selection-->
+                        <label for="" class="fw-bold fs-8">Gidiş Tarihi</label>
+                        <input type="date" name="" id="date-gidis" class="form-control inp-width inp-height">
+                    </div>
+                    <div>
+                        <!-- Return Date Selection-->
+                        <label for="" class="fw-bold fs-8">Dönüş Tarihi</label>
+                        <input type="date" name="" id="date-donus" class="form-control inp-width inp-height">
+                    </div>
+                    <!--Cabin Class & Travvellers Selection-->
+                    <div>
+                        <label for="" class="fw-bold fs-8">Kabin ve Yolcu Seçimi</label>
+                        <select class="form-select inp-width inp-height" aria-label="Default select example">
+                            <option selected>Open this select menu</option>
+                            <option value="1">One</option>
+                            <option value="2">Two</option>
+                            <option value="3">Three</option>
+                          </select>
+                    </div>
+                </section>              
+                <!--Search Result Filtering-->
+                <div>
+                    <div class="d-flex align-items-center justify-content-end">
+                        <div class="btn btn-dark fw-bold btn-lg inp-width">Uçuşları Ara</div>
+                    </div>
+                </div>
+                <div>
+                    <br>
+                    <p class="fw-lighter fs-2 txt-undrescore">Results</p>
+                    <br>
+                </div>
+                <div style="overflow-y:auto;" class="d-block align-items-center justify-content-between result-size bg-cp-bg-light">
+                    <!-- Flight Results will be shown here-->
+                </div>
+            </div>
+        </div>
+    </main> 
+    
+
+<!--For Mobile Version -->
+
+    <div class="d-block d-xl-none rounded-2 bg-cp py-3 px-3">
+        <div class="d-flex align-items-center py-2">
+            <div class="form-check">
+                <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+                <label class="form-check-label fw-bold fs-7  me-2" for="flexRadioDefault1">
+                  Tek Yön
+                </label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2" checked>
+                <label class="form-check-label fw-bold fs-7 " for="flexRadioDefault2">
+                  Gidiş Dönüş
+                </label>
+              </div>
+        </div>
+        <!-- From Part Selection-->
+        <div>
+            <label for="fromselection" class="form-label fw-bold fs-8 m-0">Nereye</label><br>
+            <input class="form-control" list="fromlist" id="fromselection" placeholder="Havaalanı veya Ülke">
+            <datalist id="fromlist">
+            <option value="San Francisco">
+            <option value="New York">
+            <option value="Seattle">
+            <option value="Los Angeles">
+            <option value="Chicago">
+            </datalist>
+        </div>
+          <div>
+            <label for="toselection" class="form-label fw-bold fs-8 m-0">Nereden</label><br>
+            <input class="form-control" list="tolist" id="toselection" placeholder="Havaalanı veya Ülke">
+            <datalist id="tolist">
+            <option value="San Francisco">
+            <option value="New York">
+            <option value="Seattle">
+            <option value="Los Angeles">
+            <option value="Chicago">
+            </datalist>
+        </div>
+          <div class="d-flex align-items-center justify-content-between">
+                <!-- Date Selection Part-->
+                <div>
+                    <!--Departure Date Selection-->
+                    <label for="" class="fw-bold fs-8">Gidiş Tarihi</label>
+                    <input type="date" name="" id="date-gidis" class="form-control inp-height date-width">
+                </div>
+                <div>
+                    <!-- Return Date Selection-->
+                        <label for="" class="fw-bold fs-8 ">Dönüş Tarihi</label>
+                        <input type="date" name="" id="date-donus" class="form-control inp-height date-width">
+                </div>
+          </div>
+          <div class="py-2">
+                <!--Cabin Class & Travvellers Selection-->
+                <div>
+                    <label for="" class="fw-bold fs-8">Kabin ve Yolcu Seçimi</label>
+                    <select class="form-select" aria-label="Default select example">
+                        <option selected>Open this select menu</option>
+                        <option value="1">One</option>
+                        <option value="2">Two</option>
+                        <option value="3">Three</option>
+                    </select>
+                </div>
+          </div>
+          <div class="py-3">
+            <div class="btn btn-dark fw-bold form-control"> Uçuşları Ara</div>
+            <div>
+                <br>
+                <p class="fw-lighter fs-2 txt-undrescore">Results</p>
+                <br>
+            </div>
+          </div>
+          <div style="overflow-y:auto;" class="d-block align-items-center justify-content-between result-size bg-cp-bg-light">
+            <!-- Flight Results will be shown here-->
+        </div>
+    </div>
+-->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
-  </body>
+</body>
 </html>

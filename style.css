@@ -1,0 +1,33 @@
+
+.bg-cp{
+    background-color: aliceblue;
+}
+
+.fs-7{
+    font-size: 15px;
+}
+
+.fs-8{
+    font-size: 13px;
+}
+
+.inp-width{
+    width: 16.5vw;
+}
+
+.inp-height{
+    height: 5vh;
+}
+
+.date-width{
+    width: 40vw;
+}
+
+.result-size{
+    width: 82vw;
+    height: 40vh;
+}
+
+.txt-undrescore{
+    text-decoration: underline;
+}
